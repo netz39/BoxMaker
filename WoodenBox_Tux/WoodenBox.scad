@@ -119,7 +119,7 @@ module box(l,b,h,t=5, d=10) {
 
   rotate([0,0,0])
   translate([l+d,b+d,0])
-    wand(b,h,t, ausschnitt="true");
+    wand(b,h,t, ausschnitt="false");
 
   rotate([0,0,180])
   translate([-l,d,0])
@@ -127,7 +127,7 @@ module box(l,b,h,t=5, d=10) {
 
   rotate([0,0,0])
   translate([l+d,b-h,0])
-    wand(b,h,t, ausschnitt="true");
+    wand(b,h,t, ausschnitt="false");
 }
 
 //#cube([300,300,1]);
@@ -136,5 +136,5 @@ t=4;
 
 projection(cut=true)
   translate([0,0,-t/2])
-  box(200+2*t, 150+2*t, 100, t);
+  box(115+2*t, 145+2*t, 45, t);
 
